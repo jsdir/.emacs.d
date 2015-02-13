@@ -1,5 +1,0 @@
-(require-package 'firecode-theme)
-
-(load-theme 'firecode t)
-
-(provide 'init-themes)

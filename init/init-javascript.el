@@ -39,4 +39,6 @@
 
 (add-hook 'jsx-mode-hook (lambda () (tern-mode t)))
 
+(setq js-indent-level 2)
+
 (provide 'init-javascript)
