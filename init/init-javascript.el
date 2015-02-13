@@ -20,4 +20,23 @@
 (add-hook 'js-mode-hook 'js2-minor-mode)
 (add-hook 'js2-mode-hook 'ac-js2-mode)
 
+(require-package 'react-snippets)
+
+;; Tern
+
+(require-package 'tern)
+(require-package 'tern-auto-complete)
+
+(add-hook 'js-mode-hook (lambda () (tern-mode t)))
+(eval-after-load 'tern
+   '(progn
+      (require 'tern-auto-complete)
+      (tern-ac-setup)))
+
+(defun delete-tern-process ()
+  (interactive)
+  (delete-process "Tern"))
+
+(add-hook 'jsx-mode-hook (lambda () (tern-mode t)))
+
 (provide 'init-javascript)

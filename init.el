@@ -6,6 +6,7 @@
 ;; Customization
 (require 'init-themes)
 (require 'init-x)
+(require 'init-common)
 (require 'init-lint)
 (require 'init-javascript)
 
