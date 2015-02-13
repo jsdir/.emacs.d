@@ -7,6 +7,7 @@
 (require 'init-themes)
 (require 'init-x)
 (require 'init-lint)
+(require 'init-javascript)
 
 (cua-mode t)
 
