@@ -8,6 +8,28 @@
 (ac-set-trigger-key "TAB")
 (ac-set-trigger-key "<tab>")
 
+(setq-default
+ ac-sources
+ '(
+   ac-source-yasnippet
+   ac-source-imenu
+   ac-source-abbrev
+   ac-source-words-in-same-mode-buffers
+   ac-source-files-in-current-dir
+   ac-source-filename
+   ))
+
+(setq ac-auto-start 2)
+
+;; ropemacs integration
+;; (ac-ropemacs-initialize)
+;; (add-hook 'python-mode-hook
+;;           (lambda ()
+;;             (setq ac-sources (append ac-sources 'ac-source-ropemacs))))
+
+;; add coffee-mode to auto-complete
+(add-to-list 'ac-modes 'coffee-mode)
+
 (require-package 'yasnippet)
 (yas-global-mode 1)
 
@@ -21,7 +43,10 @@
 ;; Workaround for linum
 (ac-linum-workaround)
 
-(when (fboundp 'windmove-default-keybindings)
-  (windmove-default-keybindings 'super))
+(global-set-key (kbd "s-b")  'windmove-left)
+(global-set-key (kbd "s-f") 'windmove-right)
+(global-set-key (kbd "s-n")    'windmove-up)
+(global-set-key (kbd "s-p")  'windmove-down)
 
+(global-auto-revert-mode t)
 (provide 'init-common)

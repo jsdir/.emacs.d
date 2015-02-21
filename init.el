@@ -11,10 +11,22 @@
 (require 'init-common)
 (require 'init-tabs)
 (require 'init-project)
+;;(require 'init-org)
 (require 'init-lint)
+(require 'init-bs)
+(require 'init-movetext)
+
+;; Languages
 (require 'init-javascript)
+(require 'init-go)
+(require 'init-coffee)
+(require 'init-css)
+(require 'init-yaml)
+
+(require 'init-popwin)
 (require 'init-neotree)
 (require 'init-perspective)
+(require 'init-whitespace)
 
 (cua-mode t)
 

@@ -1,9 +1,6 @@
-(setq backup-directory-alist '(("." . "~/.emacs.d/backup"))
-  backup-by-copying t    ; Don't delink hardlinks
-  version-control t      ; Use version numbers on backups
-  delete-old-versions t  ; Automatically delete excess backups
-  kept-new-versions 20   ; how many of the newest versions to keep
-  kept-old-versions 5    ; and how many of the old
-  )
-
+;; store all backup and autosave files in the tmp dir
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
 (provide 'init-backup)
