@@ -32,6 +32,8 @@
 
 (require-package 'yasnippet)
 (yas-global-mode 1)
+(add-hook 'term-mode-hook (lambda()
+        (setq yas-dont-activate t)))
 
 (require-package 'autopair)
 (autopair-global-mode)
@@ -49,4 +51,5 @@
 (global-set-key (kbd "C-M-<down>")  'windmove-down)
 
 (global-auto-revert-mode t)
+
 (provide 'init-common)
