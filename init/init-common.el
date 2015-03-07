@@ -19,7 +19,7 @@
    ac-source-filename
    ))
 
-(setq ac-auto-start 2)
+(setq ac-auto-start 1)
 
 ;; ropemacs integration
 ;; (ac-ropemacs-initialize)
@@ -43,10 +43,10 @@
 ;; Workaround for linum
 (ac-linum-workaround)
 
-(global-set-key (kbd "s-b")  'windmove-left)
-(global-set-key (kbd "s-f") 'windmove-right)
-(global-set-key (kbd "s-n")    'windmove-up)
-(global-set-key (kbd "s-p")  'windmove-down)
+(global-set-key (kbd "C-M-<left>")  'windmove-left)
+(global-set-key (kbd "C-M-<right>") 'windmove-right)
+(global-set-key (kbd "C-M-<up>")    'windmove-up)
+(global-set-key (kbd "C-M-<down>")  'windmove-down)
 
 (global-auto-revert-mode t)
 (provide 'init-common)
