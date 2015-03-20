@@ -35,3 +35,6 @@
 
 (setenv "PATH" (concat (getenv "PATH") ":/home/jsdir/.nvm/v0.10.33/bin"))
 (setq exec-path (append exec-path '("/home/jsdir/.nvm/v0.10.33/bin")))
+
+(setenv "GOPATH" (concat (getenv "GOPATH") ":/home/jsdir/.gvm/pkgsets/go1.4/global"))
+(setq exec-path (append exec-path '("/home/jsdir/.gvm/gos/go1.4/bin")))
